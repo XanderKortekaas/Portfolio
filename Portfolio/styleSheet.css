@@ -432,6 +432,7 @@ div
     border-radius: 7.5px;
     margin-top: 1rem;
     transition: background-color 0.3s ease;
+    background: radial-gradient();
 }
 
 .project-grid
@@ -483,22 +484,22 @@ div
    display: block;
 }
 
-.project-card-1:hover 
+.project-card-1:hover h3
 {
     border-width: 3.5px;
-    border-color: var(--c-green-500); 
+    color: var(--c-green-500);
 }
   
-.project-card-2:hover 
+.project-card-2:hover h3
 {
     border-width: 3.5px;
-    border-color: var(--c-olive-500); 
+    color: var(--c-olive-500); 
 }
   
-.project-card-3:hover 
+.project-card-3:hover h3
 {
     border-width: 3.5px;
-    border-color: var(--c-gray-300); 
+    color: #88d2db;
 }
 
 @media(min-width: 1201px) 
