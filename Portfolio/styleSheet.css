@@ -41,6 +41,8 @@ body
     padding-top: 0;
     padding-bottom: 3vw;
     margin: 0;
+
+    
 }
 
 .app
@@ -268,6 +270,7 @@ div
 .tabs a
 {
     color: var(--c-text-tertiary);
+    font-size: 1.1rem;
     text-decoration: none;
     display: inline-block;
     padding-top: 2rem;
@@ -298,7 +301,8 @@ div
     color: var(--c-green-500);
 }
 
-.navigation {
+.navigation 
+{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -335,42 +339,41 @@ div
     }
 }
 
-.about-me-body {
+.about-me-body 
+{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 2rem;
     padding: 2vw 4vw;
     width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 2200px;
 }
 
-@media (min-width: 768px)
+
+
+.about-me-intro 
 {
-    .about-me-body {
-        align-items: flex-start;
-    }
-}
-
-.about-me-intro {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 2rem;
     margin-bottom: 2rem;
     width: 100%;
     max-width: 960px;
     flex-direction: column;
+    text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) 
+{
     .about-me-intro {
         flex-direction: row;
         text-align: left;
     }
 }
 
-.profile-image {
+.profile-image 
+{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -407,8 +410,18 @@ div
 .intro-text
 {
     align-self: flex-start;
-    text-align: center;
     flex-grow: 1;
+}
+.intro-text p 
+{
+    color: var(--c-text-secondary);
+    text-align: center;
+}
+
+.intro-text h2
+{
+    color:var(--c-green-500);
+    text-align: center;
 }
 
 @media (min-width: 768px)
@@ -421,7 +434,6 @@ div
 .about-me-heading
 {
     color: var(--c-olive-500);
-    text-align: center;
     margin-bottom: 1rem;
 }
 
@@ -433,13 +445,6 @@ div
     width: 100%;
     max-width: 960px;
     margin-bottom: 2rem;
-}
-
-@media (min-width: 768px)
-{
-    .about-me-details {
-        align-items: flex-start;
-    }
 }
 
 .text-container
@@ -546,8 +551,6 @@ div
     width: 100%;
     height: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .project-card-1:hover h3
@@ -625,7 +628,7 @@ div
 .skills-intro h2
 {
     margin-bottom: 0.5rem;
-    color: var(--c-green-200);
+    color: var(--c-green-500);
 }
 
 .skills-intro p
@@ -702,6 +705,177 @@ div
     text-decoration: underline;
 }
 
+.popup 
+{
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
+}
+.popup-content 
+{
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px; 
+}
+  
+.close-button 
+{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close-button:hover,
+.close-button:focus 
+{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cv-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem; 
+    padding: 2rem;
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 2rem auto; 
+}
+
+.cv-header {
+    grid-column: 1 / -1; 
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cv-header h1 {
+    color: var(--c-olive-500);
+    margin-bottom: 0.5rem;
+}
+
+.cv-header .lead {
+    color: var(--c-text-secondary);
+}
+
+.cv-section {
+    margin-bottom: 1rem;
+    
+}
+
+.cv-section h2
+{
+    color: var(--c-green-500);
+}
+
+.contact-info,
+.skills,
+.languages {
+    color: var(--c-text-secondary);
+    grid-column: 1 / -1;
+    text-align: center; 
+    margin-bottom: .5rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+}
+
+button
+{
+    color: var(--c-gray-800);
+    background-color: var(--c-green-500);
+    padding: 0.5rem 1rem;
+    border-color: var(--c-gray-800);
+    border-radius: 4px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.skill-category {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.skill-category h3 {
+    color: var(--c-green-500);
+    margin-bottom: 0.5rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.skill-category li {
+    color: var(--c-text-secondary);
+    background-color: var(--c-gray-700);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.languages h2 {
+    color: var(--c-green-500);
+    margin-bottom: 1rem;
+}
+
+.languages ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.languages li {
+    color: var(--c-text-secondary);
+}
+
+
+
+.experience-item h3 {
+    color: var(--c-text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.experience-item .job-title,
+.education-item .degree,
+.date {
+    color: var(--c-text-tertiary);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.education-item h3 {
+    color: var(--c-text-primary);
+    margin-bottom: 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .cv-page {
+        grid-template-columns: 1fr; 
+    }
+}
+
 button,
 select,
 input,
@@ -715,6 +889,43 @@ a
     color: inherit;
 }
 
+form div 
+{
+    margin-bottom: 10px;
+}
+  
+label 
+{
+    display: block;
+    margin-bottom: 5px;
+}
+  
+input[type=text],
+input[type=email],
+textarea 
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+button[type=submit] 
+{
+    background-color: #4CAF50; 
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+  
+button[type=submit]:hover 
+{
+    opacity: 0.8;
+}
 /* Phone stuff*/
 
 .burger-menu
