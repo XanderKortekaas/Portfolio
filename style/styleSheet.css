@@ -14,7 +14,7 @@
 
     --c-green-500: #45ffbc;
     --c-olive-500: #e3ffa8;
-    --c-blue-500: #A9B7C1;
+    --c-blue-500: #88d2db;
 
     --c-white-500: var(--c-gray-100);
 
@@ -350,8 +350,6 @@ div
     max-width: 2200px;
 }
 
-
-
 .about-me-intro 
 {
     display: flex;
@@ -492,7 +490,7 @@ div
 
 .project-grid
 {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
@@ -508,9 +506,12 @@ div
 }
 
 .project-details {
-    max-width: 100%;
-    justify-content: center;
+    display: flex;
+    justify-content: center ;
     align-items: center;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -523,6 +524,7 @@ div
 
 .project-details h3
 {
+    text-align: center;
     color: var(--c-gray-500);
     margin-bottom: 1rem;
     text-decoration: none;
@@ -548,16 +550,17 @@ div
 
 .project-details img
 {
+    
     width: 100%;
     height: auto;
-    display: block;
 }
 
 .project-card-1:hover h3
 {
     border-width: 3.5px;
-    color: var(--c-green-500);
+    color: var(--c-green-500)
 }
+
 
 .project-card-2:hover h3
 {
@@ -568,9 +571,14 @@ div
 .project-card-3:hover h3
 {
     border-width: 3.5px;
-    color: #88d2db;
+    color: var(--c-blue-500);
 }
 
+.project-card-4:hover h3
+{
+    border-width: 3.5px;
+    color: var(--c-green-500);
+}
 .project-link
 {
     height: 100%;
