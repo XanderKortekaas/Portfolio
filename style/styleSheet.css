@@ -778,7 +778,6 @@ div
 
 .cv-section {
     margin-bottom: 1rem;
-    
 }
 
 .cv-section h2
@@ -786,6 +785,17 @@ div
     color: var(--c-green-500);
 }
 
+.cv-section li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cv-section li img{
+    height: 2.5em;
+    width: auto;
+    vertical-align: middle;
+}
 .contact-info,
 .skills,
 .languages {
